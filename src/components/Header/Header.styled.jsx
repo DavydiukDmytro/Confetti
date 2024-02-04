@@ -2,8 +2,8 @@ import styled from '@emotion/styled';
 
 export const HeaderContainer = styled.header`
 	position: fixed;
-	width: 100%;
-	outline: 1px solid red;
+	top: 30px;
+	width: 100vw;
 `;
 
 export const Button = styled.button`
@@ -14,6 +14,7 @@ export const Button = styled.button`
 	align-items: center;
 	border: none;
 	cursor: pointer;
+	background-color: inherit;
 `;
 
 export const ButtonText = styled.p`
