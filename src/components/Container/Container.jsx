@@ -1,16 +1,16 @@
-import { ContainerMain } from './Container.styled';
 import PropTypes from 'prop-types';
+import { ContainerMain } from './Container.styled';
 
-export const Container = ({ flex, fixed, children }) => {
+export const Container = ({ hero, flex, children }) => {
 	return (
-		<ContainerMain fixed={fixed} flex={flex}>
+		<ContainerMain hero={hero} flex={flex}>
 			{children}
 		</ContainerMain>
 	);
 };
 
 Container.propTypes = {
+	hero: PropTypes.bool,
 	flex: PropTypes.bool,
-	fixed: PropTypes.bool,
 	children: PropTypes.node.isRequired,
 };

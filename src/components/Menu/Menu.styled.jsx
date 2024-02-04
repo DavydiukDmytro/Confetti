@@ -4,25 +4,24 @@ export const ContainerMenu = styled.div`
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
+	z-index: 2;
 	text-align: center;
 	background-color: var(--bg);
 `;
 
 export const HeaderMenu = styled.div`
-	width: var(--mobile);
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+	width: var(--mobile);
 	padding: 0 20px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 62px;
 	padding-top: 30px;
 `;
-
-export const Logo = styled.a``;
 
 export const Button = styled.button`
 	padding: 0;

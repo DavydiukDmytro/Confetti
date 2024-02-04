@@ -7,7 +7,7 @@
 
 @font-face {
 	font-family: 'Anzeigengrot';
-	font-style: regular;
+	font-style: medium;
 	font-weight: 500;
 	src: local('Anzeigengrot'), url('./anzeigengrot/anzeigengrot.ttf') format('truetype');
 }
