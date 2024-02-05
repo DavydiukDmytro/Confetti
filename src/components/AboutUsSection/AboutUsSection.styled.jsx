@@ -19,14 +19,22 @@ export const Description = styled.p`
 `;
 
 export const ItemCard = styled.li`
+	display: flex;
+	height: 253px;
 	padding: 24px;
 	border-radius: 24px;
 	background-color: red;
 	${({ color }) => color && `background-color: ${color}`};
 `;
+export const CardInfo = styled.div`
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+`;
 
 export const CardTitle = styled.h3`
-	margin-bottom: 53px;
 	font-family: 'Anzeigengrot';
 	font-size: 24px;
 	line-height: 29px;
