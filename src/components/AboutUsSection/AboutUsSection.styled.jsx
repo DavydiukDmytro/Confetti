@@ -18,12 +18,10 @@ export const Description = styled.p`
 	color: var(--extra-text);
 `;
 
-export const ItemCard = styled.li`
-	display: flex;
+export const ItemCard = styled.div`
 	height: 253px;
 	padding: 24px;
 	border-radius: 24px;
-	background-color: red;
 	${({ color }) => color && `background-color: ${color}`};
 `;
 export const CardInfo = styled.div`

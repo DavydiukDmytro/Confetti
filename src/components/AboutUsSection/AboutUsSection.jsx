@@ -2,13 +2,13 @@ import aboutUsSectionData from '../../data/AboutUsData.json';
 import { Container } from '../Container';
 import { Section } from '../Section';
 import { SliderCard } from '../Slider/Slider';
+import { Title } from '../Title';
 import {
 	CardDescription,
 	CardInfo,
 	CardTitle,
 	Description,
 	ItemCard,
-	Title,
 } from './AboutUsSection.styled';
 
 export const AboutUsSection = () => {
@@ -17,14 +17,14 @@ export const AboutUsSection = () => {
 	return (
 		<Section>
 			<Container first={true}>
-				<Title>{title}</Title>
+				<Title subTitle={true}>{title}</Title>
 				<Description>{description}</Description>
 				<SliderCard>
-					{arrCard.map((item) => (
-						<ItemCard key={item.id} color={item.bgColor}>
+					{arrCard.map((i) => (
+						<ItemCard key={i.id} color={i.bgColor}>
 							<CardInfo>
-								<CardTitle>{item.title}</CardTitle>
-								<CardDescription>{item.description}</CardDescription>
+								<CardTitle>{i.title}</CardTitle>
+								<CardDescription>{i.description}</CardDescription>
 							</CardInfo>
 						</ItemCard>
 					))}
