@@ -27,6 +27,7 @@
 		height: 100%;
 		border: none;
 		background-color: inherit;
+		cursor: pointer;
 		&::before {
 			content: '';
 			position: absolute;

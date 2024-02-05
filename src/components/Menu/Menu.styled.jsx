@@ -5,10 +5,13 @@ export const ContainerMenu = styled.div`
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100vh;
+	height: 0;
 	z-index: 2;
 	text-align: center;
 	background-color: var(--bg);
+	transition: height 1s ease;
+	overflow: hidden;
+	${({ isOpenMenu }) => isOpenMenu && 'height: 100%;'};
 `;
 
 export const HeaderMenu = styled.div`
@@ -29,11 +32,16 @@ export const Button = styled.button`
 	border: none;
 	cursor: pointer;
 	background-color: inherit;
-`;
 
-export const Svg = styled.svg`
 	fill: none;
 	stroke: var(--main);
+
+	transition: stroke 0.3s ease;
+
+	&:hover,
+	&:focus {
+		stroke: var(--accent);
+	}
 `;
 
 export const ListItem = styled.li`
@@ -49,4 +57,11 @@ export const Link = styled.a`
 	font-size: 24px;
 	line-height: 19px;
 	color: var(--main);
+
+	transition: color 0.3s ease;
+
+	&:hover,
+	&:focus {
+		color: var(--accent);
+	}
 `;

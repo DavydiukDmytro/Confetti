@@ -1,4 +1,5 @@
 import svgSprite from '../../assets/svg/svgSprite.svg';
+import reviewsSectionData from '../../data/ReviewsData.json';
 import { Container } from '../Container';
 import { Section } from '../Section';
 import { SliderCard } from '../Slider/Slider';
@@ -6,32 +7,14 @@ import { Title } from '../Title';
 import { CardInfo, ItemCard, Name, Text } from './ReviewsSection.styled';
 
 export const ReviewsSection = () => {
-	const reviewsSectionData = {
-		title: 'Recenzje',
-		reviews: [
-			{
-				id: 1,
-				text: 'Baaardzo super ścianka , dziękuję za współpracę 🫶',
-				name: 'Anetta Ostalczyk ',
-			},
-			{
-				id: 2,
-				text: 'Jeszcze raz wielkie dzięki! Ciężko nam było foty robić jak ustawili te stoły 🥰 ale sam klimat i dekoracja robiła meegaaa wrażenie!',
-				name: 'Aleksandra Murawska ',
-			},
-			{
-				id: 3,
-				text: 'Ścianka była piękna , bardzo delikatna , Jeszcze raz bardzo dziękuję )',
-				name: 'Katia Maksymiw ',
-			},
-		],
-	};
+	const { title, reviews } = reviewsSectionData;
+
 	return (
 		<Section>
 			<Container>
-				<Title>{reviewsSectionData.title}</Title>
+				<Title>{title}</Title>
 				<SliderCard>
-					{reviewsSectionData.reviews.map((i) => (
+					{reviews.map((i) => (
 						<ItemCard key={i.id}>
 							<CardInfo>
 								<Text>{i.text}</Text>

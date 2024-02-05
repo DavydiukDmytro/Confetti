@@ -2,20 +2,20 @@ import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import svgSprite from '../../assets/svg/svgSprite.svg';
 import logoPng from '../../assets/images/logo/logoMenu.png';
-import { Button, ContainerMenu, HeaderMenu, Link, ListItem, Svg } from './Menu.styled';
+import { Button, ContainerMenu, HeaderMenu, Link, ListItem } from './Menu.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
-export const Menu = ({ closeMenu }) => {
+export const Menu = ({ isOpenMenu, closeMenu }) => {
 	return createPortal(
-		<ContainerMenu>
+		<ContainerMenu isOpenMenu={isOpenMenu}>
 			<HeaderMenu>
 				<img src={logoPng} alt='Logo "Confetti"' width={98} />
 
 				<Button type='button' aria-label='Close Menu' onClick={() => closeMenu()}>
-					<Svg width={24} height={24}>
+					<svg width={24} height={24}>
 						<use xlinkHref={svgSprite + '#icon-close'} />
-					</Svg>
+					</svg>
 				</Button>
 			</HeaderMenu>
 			<nav>

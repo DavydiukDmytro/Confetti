@@ -20,7 +20,7 @@ export const ContainerMain = styled.div`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		height: 100vh;
+		height: 100%;
 		padding-top: 62px;
 		padding-bottom: 0;
 		background-image: url(${bg});
