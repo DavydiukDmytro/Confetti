@@ -9,12 +9,12 @@ export const Hero = () => {
 			<SectionHero>
 				<Container hero={true}>
 					<Title>Confetti</Title>
-					<Img src={ballons1} alt='Ballons' width={158} role='image' />
+					<Img src={ballons1} alt='Ballons' width={158} />
 					<Text>
 						Tworzymy unikalne <br />i niepowtarzalne <SubText>dekoracje balonowe</SubText> na
 						imprezy
 					</Text>
-					<Img2 src={ballons2} alt='Ballons' width={180} role='image' />
+					<Img2 src={ballons2} alt='Ballons' width={180} />
 				</Container>
 				<Container hero={true}>awsawawdawdawd</Container>
 			</SectionHero>

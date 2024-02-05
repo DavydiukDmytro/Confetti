@@ -11,7 +11,7 @@ export const Button = styled.button`
 	background-color: inherit;
 `;
 
-export const ButtonText = styled.p`
+export const ButtonText = styled.span`
 	margin-right: 8px;
 	font-family: 'Anzeigengrot';
 	text-transform: uppercase;

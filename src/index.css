@@ -29,8 +29,6 @@ body {
 	overflow-x: hidden;
 	font-family: 'Inter';
 	font-weight: 500;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	color: var(--main);
 }
 

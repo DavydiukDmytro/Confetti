@@ -1,13 +1,11 @@
 @font-face {
 	font-family: 'Inter';
-	font-style: medium;
 	font-weight: 500;
 	src: local('Inter'), url('./inter-medium/inter-medium.ttf') format('truetype');
 }
 
 @font-face {
 	font-family: 'Anzeigengrot';
-	font-style: medium;
 	font-weight: 500;
 	src: local('Anzeigengrot'), url('./anzeigengrot/anzeigengrot.ttf') format('truetype');
 }
