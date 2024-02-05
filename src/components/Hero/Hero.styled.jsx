@@ -1,11 +1,5 @@
 import styled from '@emotion/styled';
 
-export const SectionHero = styled.section`
-	width: 100%;
-	height: 100vh;
-	overflow: hidden;
-`;
-
 export const Title = styled.h1`
 	position: absolute;
 	white-space: nowrap;

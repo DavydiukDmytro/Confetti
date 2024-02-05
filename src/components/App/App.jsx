@@ -1,3 +1,4 @@
+import { AboutUsSection } from '../AboutUsSection';
 import { Header } from '../Header';
 import { Hero } from '../Hero';
 
@@ -7,6 +8,7 @@ export const App = () => {
 			<Header />
 			<main>
 				<Hero />
+				<AboutUsSection />
 			</main>
 		</>
 	);

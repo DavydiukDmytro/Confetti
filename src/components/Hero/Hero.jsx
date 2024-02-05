@@ -1,12 +1,13 @@
 import ballons1 from '../../assets/images/ballons/ballons1.png';
 import ballons2 from '../../assets/images/ballons/ballons2.png';
 import { Container } from '../Container';
-import { Img, Img2, SectionHero, SubText, Text, Title } from './Hero.styled';
+import { Section } from '../Section';
+import { Img, Img2, SubText, Text, Title } from './Hero.styled';
 
 export const Hero = () => {
 	return (
 		<>
-			<SectionHero>
+			<Section hero={true}>
 				<Container hero={true}>
 					<Title>Confetti</Title>
 					<Img src={ballons1} alt='Ballons' width={158} />
@@ -17,7 +18,7 @@ export const Hero = () => {
 					<Img2 src={ballons2} alt='Ballons' width={180} />
 				</Container>
 				<Container hero={true}>awsawawdawdawd</Container>
-			</SectionHero>
+			</Section>
 		</>
 	);
 };

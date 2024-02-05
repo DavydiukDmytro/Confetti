@@ -27,7 +27,7 @@ export const Header = () => {
 	return (
 		<>
 			<HeaderContainer>
-				<Container flex={true}>
+				<Container header={true}>
 					<HeaderLogo />
 					<HeaderButton onClick={() => setIsOpenMenu(true)} />
 				</Container>
