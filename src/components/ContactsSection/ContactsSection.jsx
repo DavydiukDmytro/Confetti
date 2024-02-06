@@ -5,7 +5,7 @@ import { Feedback } from './Feedback';
 
 export const ContactsSection = () => {
 	return (
-		<Section>
+		<Section id={'contacts'}>
 			<Container last={true}>
 				<Contacts />
 				<Feedback />

@@ -2,11 +2,18 @@ import { createPortal } from 'react-dom';
 import PropTypes from 'prop-types';
 import svgSprite from '../../assets/svg/svgSprite.svg';
 import logoPng from '../../assets/images/logo/logoMenu.png';
+import scrollToSection from '../../utils/scroll/scroll';
 import { Button, ContainerMenu, HeaderMenu, Link, ListItem } from './Menu.styled';
 
 const modalRoot = document.getElementById('modal-root');
 
 export const Menu = ({ isOpenMenu, closeMenu }) => {
+	const menuData = [
+		{ title: 'główna', id: 'hero' },
+		{ title: 'O nas', id: 'aboutus' },
+		{ title: 'Recenzje', id: 'reviews' },
+		{ title: 'Kontakty', id: 'contacts' },
+	];
 	return createPortal(
 		<ContainerMenu isOpenMenu={isOpenMenu}>
 			<HeaderMenu>
@@ -20,18 +27,19 @@ export const Menu = ({ isOpenMenu, closeMenu }) => {
 			</HeaderMenu>
 			<nav>
 				<ul>
-					<ListItem>
-						<Link href=''>główna</Link>
-					</ListItem>
-					<ListItem>
-						<Link href=''>O nas</Link>
-					</ListItem>
-					<ListItem>
-						<Link href=''>Recenzje</Link>
-					</ListItem>
-					<ListItem>
-						<Link href=''>Kontakty</Link>
-					</ListItem>
+					{menuData.map((i) => (
+						<ListItem key={i.id}>
+							<Link
+								href={`#${i.id.toLowerCase()}`}
+								onClick={(e) => {
+									closeMenu();
+									scrollToSection(i.id, e);
+								}}
+							>
+								{i.title}
+							</Link>
+						</ListItem>
+					))}
 				</ul>
 			</nav>
 		</ContainerMenu>,

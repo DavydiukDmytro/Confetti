@@ -10,7 +10,7 @@ export const ReviewsSection = () => {
 	const { title, reviews } = reviewsSectionData;
 
 	return (
-		<Section>
+		<Section id={'reviews'}>
 			<Container>
 				<Title>{title}</Title>
 				<SliderCard>

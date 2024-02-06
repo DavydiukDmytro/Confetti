@@ -9,7 +9,7 @@ export const ContainerMenu = styled.div`
 	z-index: 2;
 	text-align: center;
 	background-color: var(--bg);
-	transition: height 1s ease;
+	transition: height 0.5s ease;
 	overflow: hidden;
 	${({ isOpenMenu }) => isOpenMenu && 'height: 100%;'};
 `;

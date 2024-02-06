@@ -7,7 +7,7 @@ import { Img, Img2, SubText, Text } from './Hero.styled';
 export const Hero = () => {
 	return (
 		<>
-			<Section hero={true}>
+			<Section id={'hero'} hero={true}>
 				<Container hero={true}>
 					<h1 className='invisible'>Confetti</h1>
 					<Img src={ballons1} alt='Ballons' width={158} />

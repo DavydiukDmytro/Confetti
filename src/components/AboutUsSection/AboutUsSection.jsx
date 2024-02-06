@@ -15,7 +15,7 @@ export const AboutUsSection = () => {
 	const { title, description, arrCard } = aboutUsSectionData;
 
 	return (
-		<Section>
+		<Section id={'aboutus'}>
 			<Container first={true}>
 				<Title subTitle={true}>{title}</Title>
 				<Description>{description}</Description>
