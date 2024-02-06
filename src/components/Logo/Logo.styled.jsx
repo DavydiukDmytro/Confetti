@@ -5,4 +5,5 @@ export const Img = styled.img`
 	transition: opacity 1s ease;
 
 	${({ positionTop }) => !positionTop && `opacity: 0;`};
+	${({ footer }) => footer && `opacity: 1;`};
 `;

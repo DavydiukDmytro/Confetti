@@ -9,7 +9,21 @@ export const ContainerMain = styled.div`
 
 	${({ first }) => first && 'padding-top: 80px'};
 
-	${({ last }) => last && 'padding: 40px 0 80px 0;'};
+	${({ last }) =>
+		last &&
+		`padding: 40px 0 80px 0;
+		position: relative;
+	&::after {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		content: '';
+		width: calc(100% - 40px);
+		height: 1px;
+		background-color: var(--accent);
+	}
+	`};
 
 	${({ header }) => header && 'display: flex; justify-content: space-between; padding: 0 20px;'};
 
@@ -26,4 +40,12 @@ export const ContainerMain = styled.div`
 		background-image: url(${bg});
 		background-size: cover;
 		`};
+
+	${({ footer }) =>
+		footer &&
+		`
+		padding: 32px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;`};
 `;

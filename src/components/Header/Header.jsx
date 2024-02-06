@@ -2,8 +2,9 @@ import { useEffect, useState } from 'react';
 import { Container } from '../Container';
 import { Menu } from '../Menu';
 import { HeaderButton } from './HeaderButton';
-import { HeaderLogo } from './HeaderLogo';
+
 import { HeaderContainer } from './Header.styled';
+import { Logo } from '../Logo';
 
 export const Header = () => {
 	const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -42,7 +43,7 @@ export const Header = () => {
 		<>
 			<HeaderContainer>
 				<Container header={true}>
-					<HeaderLogo positionTop={positionTop} />
+					<Logo positionTop={positionTop} />
 					<HeaderButton positionTop={positionTop} onClick={() => setIsOpenMenu(true)} />
 				</Container>
 			</HeaderContainer>

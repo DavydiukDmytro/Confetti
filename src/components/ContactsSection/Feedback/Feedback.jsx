@@ -60,7 +60,9 @@ export const Feedback = () => {
 				placeholder='Twoja wiadomość...'
 			/>
 
-			<Button type='submit'>Wyślij</Button>
+			<Button type='submit' disabled={!formik.isValid}>
+				Wyślij
+			</Button>
 		</Form>
 	);
 };

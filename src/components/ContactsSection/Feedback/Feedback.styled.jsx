@@ -69,12 +69,12 @@ export const Button = styled.button`
 	height: 62px;
 	border: none;
 	border-radius: 24px;
-	background-color: var(--accent);
-	cursor: pointer;
 
 	font-family: 'Anzeigengrot';
 	text-transform: uppercase;
 	font-size: 28px;
 	line-height: 22px;
 	color: var(--white);
+	background-color: ${({ disabled }) => (disabled ? 'rgba(237, 75, 94, 0.75)' : 'var(--accent)')};
+	cursor: ${({ disabled }) => (disabled ? 'auto;' : 'pointer')};
 `;
