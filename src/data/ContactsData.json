@@ -1,0 +1,12 @@
+{
+	"title": "Kontakty",
+	"description": ["Confetti - Studio", "Dekoracij Balonami", "Warszawa"],
+	"contacts": [
+		{ "title": "+48 793 351 407", "icon": "icon-call", "link": "tel:+48793351407" },
+		{
+			"title": "confettibalony@gmail.com",
+			"icon": "icon-sms",
+			"link": "mailto:confettibalony@gmail.com"
+		}
+	]
+}
