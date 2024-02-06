@@ -1,11 +1,13 @@
 @import 'normalize.css';
-@import './assets/fonts/fonts.css';
+@import '../assets/fonts/fonts.css';
 
 :root {
 	--main: #222222;
 	--extra-text: #565148;
 	--accent: #ed4b5e;
 	--extra-accent: #ffeff0;
+	--sub-text: #949494;
+	--placeholder: #888888;
 	--bg: #fff;
 	--white: #fff;
 

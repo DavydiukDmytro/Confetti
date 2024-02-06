@@ -44,5 +44,5 @@ export const CardTitle = styled.h3`
 export const CardDescription = styled.p`
 	font-size: 16px;
 	line-height: 23px;
-	color: var(--white);
+	color: #fffffe;
 `;

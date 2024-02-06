@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 export const ItemCard = styled.div`
 	height: 230px;
 	padding: 24px;
+	background-color: var(--extra-accent);
+	border-radius: 24px;
 `;
 
 export const CardInfo = styled.div`
