@@ -12,6 +12,7 @@
 	--white: #fff;
 
 	--mobile: 360px;
+	--mobile-end: 480px;
 	--tablet: 768px;
 	--laptop: 1280px;
 }

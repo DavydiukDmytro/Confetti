@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import bg from '../../assets/images/bgPng/bg.png';
 
 export const ContainerMain = styled.div`
-	width: var(--mobile);
+	min-width: var(--mobile);
+	max-width: var(--mobile-end);
 	padding: 40px 20px;
 	margin-left: auto;
 	margin-right: auto;

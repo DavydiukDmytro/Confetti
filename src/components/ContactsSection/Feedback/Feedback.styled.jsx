@@ -3,6 +3,10 @@ import styled from '@emotion/styled';
 export const Form = styled.form`
 	padding: 51px 20px;
 	background-color: var(--extra-accent);
+
+	@media (min-width: 480px) {
+		border-radius: 24px;
+	}
 `;
 
 export const GroupContainer = styled.div`

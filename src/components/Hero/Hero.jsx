@@ -12,8 +12,9 @@ export const Hero = () => {
 					<h1 className='invisible'>Confetti</h1>
 					<Img src={ballons1} alt='Ballons' width={158} />
 					<Text>
-						Tworzymy unikalne <br />i niepowtarzalne <SubText>dekoracje balonowe</SubText> na
-						imprezy
+						Tworzymy unikalne <br />i niepowtarzalne <br /> <SubText>dekoracje balonowe</SubText>
+						<br />
+						na imprezy
 					</Text>
 					<Img2 src={ballons2} alt='Ballons' width={180} />
 				</Container>

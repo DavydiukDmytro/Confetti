@@ -18,7 +18,8 @@ export const HeaderMenu = styled.div`
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
-	width: var(--mobile);
+	min-width: var(--mobile);
+	max-width: var(--mobile-end);
 	padding: 0 20px;
 	margin-left: auto;
 	margin-right: auto;
