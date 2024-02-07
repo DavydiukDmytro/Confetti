@@ -47,11 +47,6 @@ export const ContainerMain = styled.div`
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		
-			@media (min-width: 768px) {
-		padding-top: 25px;
-		padding-bottom: 28px;
-	}
 		`};
 
 	@media (min-width: 768px) {
@@ -59,5 +54,25 @@ export const ContainerMain = styled.div`
 		padding-left: 30px;
 		padding-right: 30px;
 		${({ hero }) => hero && `padding-top: 0;`};
+		${({ footer }) =>
+			footer &&
+			`padding-top: 25px;
+		padding-bottom: 28px;`};
+	}
+
+	@media (min-width: 1280px) {
+		max-width: var(--laptop);
+		padding: 50px 34px;
+
+		${({ hero }) => hero && `padding-top: 0;`};
+		${({ last }) =>
+			last &&
+			`padding: 100px 34px; display: flex; justify-content: space-between; align-items: center;`};
+		${({ reviews }) => reviews && `padding-bottom: 100px;`};
+		${({ footer }) =>
+			footer &&
+			`padding-top: 25px;
+		padding-bottom: 36px;`};
+		${({ header }) => header && 'padding: 0 34px;'};
 	}
 `;

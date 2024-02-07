@@ -1,13 +1,20 @@
 import svgSprite from '../../../assets/svg/svgSprite.svg';
 import contactsSectionData from '../../../data/ContactsData.json';
 import { Title } from '../../Title';
-import { Description, DescriptionSpan, ItemList } from '../ContactsSection.styled';
-import { Link, List } from './Contacts.styled';
+
+import {
+	ContactsContainer,
+	Description,
+	DescriptionSpan,
+	ItemList,
+	Link,
+	List,
+} from './Contacts.styled';
 
 export const Contacts = () => {
 	const { title, description, contacts } = contactsSectionData;
 	return (
-		<>
+		<ContactsContainer>
 			<Title contacts={true}>{title}</Title>
 			<Description>
 				{description.map((i, index) => (
@@ -26,6 +33,6 @@ export const Contacts = () => {
 					</ItemList>
 				))}
 			</List>
-		</>
+		</ContactsContainer>
 	);
 };

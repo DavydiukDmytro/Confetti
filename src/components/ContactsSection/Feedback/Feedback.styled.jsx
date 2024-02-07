@@ -15,12 +15,20 @@ export const Form = styled.form`
 		width: 608px;
 		padding: 56px 82px;
 	}
+
+	@media (min-width: 1280px) {
+		margin: 0;
+	}
 `;
 
 export const GroupContainer = styled.div`
 	width: 100%;
 	position: relative;
 	margin-bottom: 24px;
+
+	@media (min-width: 768px) {
+		margin-bottom: 32px;
+	}
 `;
 
 export const Label = styled.label`

@@ -11,7 +11,7 @@ export const ReviewsSection = () => {
 
 	return (
 		<Section id={'reviews'}>
-			<Container>
+			<Container reviews={true}>
 				<Title>{title}</Title>
 				<SliderCard sumSlide={reviews.length}>
 					{reviews.map((i) => (

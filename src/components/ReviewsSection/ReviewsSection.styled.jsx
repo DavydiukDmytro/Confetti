@@ -5,6 +5,15 @@ export const ItemCard = styled.div`
 	padding: 24px;
 	background-color: var(--extra-accent);
 	border-radius: 24px;
+
+	@media (min-width: 768px) {
+		height: 220px;
+	}
+
+	@media (min-width: 1280px) {
+		padding: 36px 24px;
+		height: 277px;
+	}
 `;
 
 export const CardInfo = styled.div`
@@ -18,6 +27,11 @@ export const CardInfo = styled.div`
 export const Text = styled.p`
 	font-size: 18px;
 	line-height: 24px;
+
+	@media (min-width: 1280px) {
+		font-size: 24px;
+		line-height: 29px;
+	}
 `;
 
 export const Name = styled.p`

@@ -13,9 +13,12 @@ export const SliderCard = ({ sumSlide, children }) => {
 	const [slideToShow, setSlideToShow] = useState(1);
 	const [navigateToSlide, setNavigateToSlide] = useState(true);
 	const isTablet = useMediaQuery({ minWidth: 768 });
+	const isLaptop = useMediaQuery({ minWidth: 1280 });
 
 	useEffect(() => {
-		if (isTablet) {
+		if (isLaptop) {
+			setSlideToShow(3);
+		} else if (isTablet) {
 			setSlideToShow(2);
 		} else {
 			setSlideToShow(1);
@@ -26,7 +29,7 @@ export const SliderCard = ({ sumSlide, children }) => {
 		} else {
 			setNavigateToSlide(true);
 		}
-	}, [isTablet, slideToShow, sumSlide]);
+	}, [isLaptop, isTablet, slideToShow, sumSlide]);
 
 	const next = () => {
 		sliderRef.slickNext();
@@ -52,7 +55,7 @@ export const SliderCard = ({ sumSlide, children }) => {
 	return (
 		<>
 			<Slider
-				style={{ marginBottom: isTablet ? '48px' : '0' }}
+				style={{ marginBottom: isTablet && navigateToSlide ? '48px' : '0' }}
 				ref={(slider) => {
 					sliderRef = slider;
 				}}

@@ -1,5 +1,9 @@
 .slick-list {
 	width: calc(100% + 24px);
+
+	@media (max-width: 768px) {
+		margin-bottom: 24px;
+	}
 }
 
 .slick-slide {
@@ -8,7 +12,6 @@
 
 .list-dots {
 	text-align: center;
-	margin-top: 24px;
 	& li {
 		display: inline-block;
 		width: 16px;

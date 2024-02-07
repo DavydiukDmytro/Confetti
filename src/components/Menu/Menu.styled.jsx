@@ -28,6 +28,18 @@ export const HeaderMenu = styled.div`
 
 	@media (min-width: 768px) {
 		max-width: var(--tablet);
+		margin-bottom: 78px;
+		padding-top: 32px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+
+	@media (min-width: 1280px) {
+		margin-bottom: 100px;
+		padding-top: 37px;
+		padding-left: 34px;
+		padding-right: 34px;
+		max-width: var(--laptop);
 	}
 `;
 
@@ -76,5 +88,10 @@ export const Link = styled.a`
 	@media (min-width: 768px) {
 		font-size: 40px;
 		line-height: 32px;
+	}
+
+	@media (min-width: 768px) {
+		font-size: 64px;
+		line-height: 50px;
 	}
 `;

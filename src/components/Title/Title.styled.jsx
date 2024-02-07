@@ -9,6 +9,14 @@ export const TitleText = styled.h2`
 	text-transform: uppercase;
 	color: var(--accent);
 
+	${({ subTitle }) =>
+		subTitle &&
+		`margin-bottom: 16px;
+        font-size: 36px;
+	    line-height: 28px;
+		color: var(--main);
+		`}
+
 	@media (min-width: 768px) {
 		font-size: 48px;
 		line-height: 53px;
@@ -18,20 +26,31 @@ export const TitleText = styled.h2`
 			contacts &&
 			`margin-bottom: 24px;
        `}
-	}
 
-	${({ subTitle }) =>
-		subTitle &&
-		`margin-bottom: 16px;
-        font-size: 36px;
-	    line-height: 28px;
-		color: var(--main);`}
-
-	@media (min-width: 768px) {
 		${({ subTitle }) =>
 			subTitle &&
 			`
+			margin-bottom: 16px;
 		  font-size: 48px;
 	    line-height: 38px;`}
+	}
+
+	@media (min-width: 1280px) {
+		font-size: 100px;
+		line-height: 79px;
+		margin-bottom: 64px;
+
+		${({ subTitle }) =>
+			subTitle &&
+			`
+			margin-bottom: 24px;
+		  font-size: 56px;
+		line-height: 44px;`}
+
+		${({ contacts }) =>
+			contacts &&
+			`text-align: left;
+			margin-bottom: 56px;
+       `}
 	}
 `;

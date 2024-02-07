@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+export const ContactsContainer = styled.div``;
+
 export const Description = styled.p`
 	text-align: center;
 	font-family: 'Anzeigengrot';
@@ -7,6 +9,18 @@ export const Description = styled.p`
 	line-height: 22px;
 	text-transform: uppercase;
 	margin-bottom: 24px;
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+		line-height: 28px;
+	}
+
+	@media (min-width: 1280px) {
+		font-size: 40px;
+		line-height: 38px;
+		margin-bottom: 32px;
+		text-align: left;
+	}
 `;
 
 export const DescriptionSpan = styled.span`
@@ -48,5 +62,9 @@ export const Link = styled.a`
 	@media (min-width: 768px) {
 		font-size: 24px;
 		line-height: 29px;
+	}
+
+	@media (min-width: 1280px) {
+		justify-content: flex-start;
 	}
 `;
