@@ -1,0 +1,6 @@
+[
+	{ "title": "główna", "id": "hero" },
+	{ "title": "O nas", "id": "aboutus" },
+	{ "title": "Recenzje", "id": "reviews" },
+	{ "title": "Kontakty", "id": "contacts" }
+]

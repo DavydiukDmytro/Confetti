@@ -20,6 +20,7 @@ export const Svg = styled.svg`
 `;
 
 export const Button = styled.button`
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -40,5 +41,19 @@ export const Button = styled.button`
 		color: var(--accent);
 		fill: var(--accent);
 		stroke: var(--accent);
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 50%;
+		right: 0;
+		display: block;
+		width: 40px;
+		height: 40px;
+		z-index: -1;
+		transform: translate(8px, -50%);
+		border-radius: 8px;
+		background-color: var(--white);
 	}
 `;

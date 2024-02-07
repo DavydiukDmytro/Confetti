@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import svgSprite from '../../assets/svg/svgSprite.svg';
 import logoPng from '../../assets/images/logo/logoMenu.png';
 import scrollToSection from '../../utils/scroll/scroll';
+import menuData from '../../data/MenuData.json';
 import { Button, ContainerMenu, HeaderMenu, Link, ListItem } from './Menu.styled';
 
-const modalRoot = document.getElementById('modal-root');
-
 export const Menu = ({ isOpenMenu, closeMenu }) => {
-	const menuData = [
-		{ title: 'główna', id: 'hero' },
-		{ title: 'O nas', id: 'aboutus' },
-		{ title: 'Recenzje', id: 'reviews' },
-		{ title: 'Kontakty', id: 'contacts' },
-	];
+	const modalRoot = document.getElementById('modal-root');
+
 	return createPortal(
 		<ContainerMenu isOpenMenu={isOpenMenu}>
 			<HeaderMenu>

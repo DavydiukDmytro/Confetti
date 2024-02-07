@@ -2,6 +2,7 @@ import ballons1 from '../../../assets/images/ballons/ballons1.png';
 import ballons2 from '../../../assets/images/ballons/ballons2.png';
 import { useFormik } from 'formik';
 import validationSchema from '../../../utils/schema/svhema';
+import { Alert } from '../../Alert';
 import {
 	Button,
 	ErrorText,
@@ -14,9 +15,11 @@ import {
 	Textarea,
 } from './Feedback.styled';
 import { useMediaQuery } from 'react-responsive';
+import { useState } from 'react';
 
 export const Feedback = () => {
 	const isTablet = useMediaQuery({ minWidth: 768 });
+	const [isSend, setIsSend] = useState(false);
 
 	const formik = useFormik({
 		initialValues: {
@@ -25,8 +28,8 @@ export const Feedback = () => {
 			message: '',
 		},
 		validationSchema: validationSchema,
-		onSubmit: (values) => {
-			alert(JSON.stringify(values, null, 2));
+		onSubmit: () => {
+			setIsSend(true);
 		},
 	});
 	return (
@@ -80,6 +83,7 @@ export const Feedback = () => {
 				Wyślij
 			</Button>
 			{isTablet && <Img2 src={ballons2} alt='Ballons' width={343} />}
+			{isSend && <Alert data={formik.values} close={() => setIsSend(false)} />}
 		</Form>
 	);
 };
