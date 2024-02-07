@@ -8,6 +8,11 @@ export const Text = styled.p`
 	text-transform: uppercase;
 	color: var(--accent);
 	text-align: center;
+
+	@media (min-width: 768px) {
+		font-size: 64px;
+		line-height: 51px;
+	}
 `;
 
 export const SubText = styled.span`
@@ -19,6 +24,11 @@ export const Img = styled.img`
 	left: 0;
 	bottom: 50%;
 	transform: translate(-35%, 5%);
+	@media (min-width: 768px) {
+		transform: translate(-25%, 30%);
+		width: 273px;
+		height: 278px;
+	}
 `;
 
 export const Img2 = styled.img`
@@ -26,4 +36,9 @@ export const Img2 = styled.img`
 	right: 0;
 	top: 50%;
 	transform: translate(20%, 20%);
+	@media (min-width: 768px) {
+		transform: translate(10%, 2%);
+		width: 307px;
+		height: 312px;
+	}
 `;

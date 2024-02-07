@@ -18,7 +18,6 @@ export const Hero = () => {
 					</Text>
 					<Img2 src={ballons2} alt='Ballons' width={180} />
 				</Container>
-				<Container hero={true}>awsawawdawdawd</Container>
 			</Section>
 		</>
 	);

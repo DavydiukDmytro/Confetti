@@ -8,7 +8,7 @@ export const Contacts = () => {
 	const { title, description, contacts } = contactsSectionData;
 	return (
 		<>
-			<Title>{title}</Title>
+			<Title contacts={true}>{title}</Title>
 			<Description>
 				{description.map((i, index) => (
 					<DescriptionSpan key={index}>{i}</DescriptionSpan>
@@ -17,7 +17,7 @@ export const Contacts = () => {
 			<List>
 				{contacts.map((i) => (
 					<ItemList key={i.icon}>
-						<Link href={i.link}>
+						<Link href={i.link} target='_blank' rel='noopener noreferrer nofollow'>
 							<svg width={24} height={24} style={{ marginRight: '8px' }}>
 								<use xlinkHref={svgSprite + '#' + i.icon} />
 							</svg>

@@ -25,6 +25,10 @@ export const HeaderMenu = styled.div`
 	margin-right: auto;
 	margin-bottom: 62px;
 	padding-top: 30px;
+
+	@media (min-width: 768px) {
+		max-width: var(--tablet);
+	}
 `;
 
 export const Button = styled.button`
@@ -48,6 +52,9 @@ export const Button = styled.button`
 export const ListItem = styled.li`
 	&:not(:last-child) {
 		margin-bottom: 24px;
+		@media (min-width: 768px) {
+			margin-bottom: 36px;
+		}
 	}
 `;
 
@@ -64,5 +71,10 @@ export const Link = styled.a`
 	&:hover,
 	&:focus {
 		color: var(--accent);
+	}
+
+	@media (min-width: 768px) {
+		font-size: 40px;
+		line-height: 32px;
 	}
 `;

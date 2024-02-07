@@ -2,7 +2,7 @@ import svgSprite from '../../assets/svg/svgSprite.svg';
 import reviewsSectionData from '../../data/ReviewsData.json';
 import { Container } from '../Container';
 import { Section } from '../Section';
-import { SliderCard } from '../Slider/Slider';
+import { SliderCard } from '../Slider';
 import { Title } from '../Title';
 import { CardInfo, ItemCard, Name, Text } from './ReviewsSection.styled';
 
@@ -13,7 +13,7 @@ export const ReviewsSection = () => {
 		<Section id={'reviews'}>
 			<Container>
 				<Title>{title}</Title>
-				<SliderCard>
+				<SliderCard sumSlide={reviews.length}>
 					{reviews.map((i) => (
 						<ItemCard key={i.id}>
 							<CardInfo>

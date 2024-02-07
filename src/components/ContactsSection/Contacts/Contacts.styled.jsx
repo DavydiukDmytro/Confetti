@@ -15,6 +15,9 @@ export const DescriptionSpan = styled.span`
 
 export const List = styled.ul`
 	margin-bottom: 36px;
+	@media (min-width: 768px) {
+		margin-bottom: 88px;
+	}
 `;
 
 export const ItemList = styled.li`
@@ -40,5 +43,10 @@ export const Link = styled.a`
 	&:hover {
 		color: var(--accent);
 		stroke: var(--accent);
+	}
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+		line-height: 29px;
 	}
 `;

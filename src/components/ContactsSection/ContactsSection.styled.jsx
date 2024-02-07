@@ -7,6 +7,11 @@ export const Description = styled.p`
 	line-height: 22px;
 	text-transform: uppercase;
 	margin-bottom: 24px;
+
+	@media (min-width: 768px) {
+		font-size: 24px;
+		line-height: 28px;
+	}
 `;
 
 export const DescriptionSpan = styled.span`

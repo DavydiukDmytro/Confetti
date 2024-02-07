@@ -1,8 +1,23 @@
+import ballons1 from '../../../assets/images/ballons/ballons1.png';
+import ballons2 from '../../../assets/images/ballons/ballons2.png';
 import { useFormik } from 'formik';
 import validationSchema from '../../../utils/schema/svhema';
-import { Button, ErrorText, Form, GroupContainer, Input, Label, Textarea } from './Feedback.styled';
+import {
+	Button,
+	ErrorText,
+	Form,
+	GroupContainer,
+	Img,
+	Img2,
+	Input,
+	Label,
+	Textarea,
+} from './Feedback.styled';
+import { useMediaQuery } from 'react-responsive';
 
 export const Feedback = () => {
+	const isTablet = useMediaQuery({ minWidth: 768 });
+
 	const formik = useFormik({
 		initialValues: {
 			name: '',
@@ -16,6 +31,7 @@ export const Feedback = () => {
 	});
 	return (
 		<Form onSubmit={formik.handleSubmit}>
+			{isTablet && <Img src={ballons1} alt='Ballons' width={412} />}
 			<GroupContainer aria-labelledby='name'>
 				<Label htmlFor='name'>Imię*</Label>
 				<Input
@@ -63,6 +79,7 @@ export const Feedback = () => {
 			<Button type='submit' disabled={!formik.isValid}>
 				Wyślij
 			</Button>
+			{isTablet && <Img2 src={ballons2} alt='Ballons' width={343} />}
 		</Form>
 	);
 };

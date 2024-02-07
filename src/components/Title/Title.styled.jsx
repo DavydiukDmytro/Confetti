@@ -9,10 +9,29 @@ export const TitleText = styled.h2`
 	text-transform: uppercase;
 	color: var(--accent);
 
+	@media (min-width: 768px) {
+		font-size: 48px;
+		line-height: 53px;
+		margin-bottom: 48px;
+
+		${({ contacts }) =>
+			contacts &&
+			`margin-bottom: 24px;
+       `}
+	}
+
 	${({ subTitle }) =>
 		subTitle &&
 		`margin-bottom: 16px;
         font-size: 36px;
 	    line-height: 28px;
 		color: var(--main);`}
+
+	@media (min-width: 768px) {
+		${({ subTitle }) =>
+			subTitle &&
+			`
+		  font-size: 48px;
+	    line-height: 38px;`}
+	}
 `;

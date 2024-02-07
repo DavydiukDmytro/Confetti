@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import bg from '../../assets/images/bgPng/bg.png';
 
 export const ContainerMain = styled.div`
 	min-width: var(--mobile);
@@ -38,7 +37,6 @@ export const ContainerMain = styled.div`
 		height: 100%;
 		padding-top: 62px;
 		padding-bottom: 0;
-		background-image: url(${bg});
 		background-size: cover;
 		`};
 
@@ -48,5 +46,18 @@ export const ContainerMain = styled.div`
 		padding: 32px 20px;
 		display: flex;
 		justify-content: space-between;
-		align-items: center;`};
+		align-items: center;
+		
+			@media (min-width: 768px) {
+		padding-top: 25px;
+		padding-bottom: 28px;
+	}
+		`};
+
+	@media (min-width: 768px) {
+		max-width: var(--tablet);
+		padding-left: 30px;
+		padding-right: 30px;
+		${({ hero }) => hero && `padding-top: 0;`};
+	}
 `;
