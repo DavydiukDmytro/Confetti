@@ -34,7 +34,7 @@ export const Feedback = () => {
 	});
 	return (
 		<Form onSubmit={formik.handleSubmit}>
-			{isTablet && <Img src={ballons1} alt='Ballons' width={412} />}
+			{isTablet && <Img src={ballons1} alt='Ballons' width={412} loading='lazy' />}
 			<GroupContainer aria-labelledby='name'>
 				<Label htmlFor='name'>Imię*</Label>
 				<Input
@@ -72,7 +72,6 @@ export const Feedback = () => {
 			<Textarea
 				id='message'
 				name='message'
-				type='text'
 				onChange={formik.handleChange}
 				onBlur={formik.handleBlur}
 				value={formik.values.message}
@@ -82,7 +81,7 @@ export const Feedback = () => {
 			<Button type='submit' disabled={!formik.isValid}>
 				Wyślij
 			</Button>
-			{isTablet && <Img2 src={ballons2} alt='Ballons' width={343} />}
+			{isTablet && <Img2 src={ballons2} alt='Ballons' width={343} loading='lazy' />}
 			{isSend && <Alert data={formik.values} close={() => setIsSend(false)} />}
 		</Form>
 	);
